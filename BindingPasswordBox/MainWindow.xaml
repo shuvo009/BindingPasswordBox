@@ -1,0 +1,12 @@
+﻿<Window x:Class="BindingPasswordBox.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:w="clr-namespace:BindingPasswordBox"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <StackPanel>
+            <PasswordBox w:PasswordHelper.Attach="True" w:PasswordHelper.Password="{Binding Text, ElementName=plain, Mode=TwoWay}" 
+                 Width="130"/>
+            <TextBlock Padding="10,0" x:Name="plain" />
+        </StackPanel>
+    </Grid>
+</Window>
